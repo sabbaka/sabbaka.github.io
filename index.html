@@ -59,6 +59,7 @@
             color: #e0f7fa;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         header, section, footer {
             margin-left: auto;
@@ -111,12 +112,78 @@
             color: #40c4ff;
             font-size: 0.95rem;
         }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #e0f7fa;
+            color: #0d0d2b;
+        }
+        .dark-mode header, .dark-mode section, .dark-mode footer {
+            background-color: #e0f7fa;
+            color: #0d0d2b;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #40c4ff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-item-content {
+            position: relative;
+            padding: 20px;
+            background-color: #16213e;
+            border: 1px solid #40c4ff;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #40c4ff;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item-content:hover {
+            background-color: #112240;
+        }
     </style>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 <body>
+
+<!-- Dark Mode Toggle Button -->
+<button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 20px; padding: 10px; background-color: #40c4ff; color: #0d0d2b; border: none; border-radius: 5px; cursor: pointer;">
+    Toggle Dark Mode
+</button>
 
 <header>
     <h1>Kirill Glebov</h1>
@@ -125,14 +192,28 @@
 
 <section>
     <h2>Professional Experience</h2>
-    <p>👾 Freelance Developer | Outreach.io | Broadcom | Red Hat | Speedflow</p>
-    <p>🔧 Building scalable, cloud-based solutions using TypeScript, Python, PHP, Ruby, and Golang.</p>
-    <p>💻 Hands-on experience with Node.js, React, GraphQL, Apollo, and Docker.</p>
+    <ul class="timeline">
+        <li class="timeline-item">
+            <div class="timeline-item-content">
+                <p>Freelance Developer | Building cloud-based solutions with TypeScript, Python, and Golang</p>
+            </div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-item-content">
+                <p>Outreach.io | Backend developer for high-scale applications using Node.js and Docker</p>
+            </div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-item-content">
+                <p>Red Hat | Leading full-stack development projects for enterprise solutions</p>
+            </div>
+        </li>
+    </ul>
 </section>
 
 <section>
     <h2>Skills & Projects</h2>
-    <p>🚀 Optimized microservices architecture for scalable solutions | Developed full-stack applications for real-world businesses.</p>
+    <p>🚀 Optimized microservices architecture | Developed full-stack applications for real-world businesses.</p>
     <p>💻 Expert in front-end technologies like React & Angular, ensuring intuitive, responsive UI/UX.</p>
     <p>🎮 Developed a World of Warcraft private server—leading both backend development and community management.</p>
 </section>
@@ -153,7 +234,246 @@
 </section>
 
 <footer>
-    <p>🖥️ © 2024 Kirill Glebov | Building Tomorrow's Tech | </p>
+    <p>🖥️ © 2024 Kirill GlebHere’s the **completed** version of the adventurous design:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirill Glebov - Senior Software Engineer</title>
+
+    <!-- SEO Enhancements -->
+    <meta name="description" content="Kirill Glebov, Senior Software Engineer with expertise in full-stack development, Golang, React, Node.js, Kubernetes, and scalable cloud technologies.">
+    <meta name="keywords" content="Senior Software Engineer, Golang, React, Node.js, Kubernetes, Full-stack developer, Freelance Developer, Kirill Glebov, scalable solutions">
+    <meta name="author" content="Kirill Glebov">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kirill Glebov - Senior Software Engineer">
+    <meta property="og:description" content="Building scalable cloud-based solutions with Golang, React, and Node.js.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.linkedin.com/in/kglebov">
+    <meta property="og:image" content="profile-image.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kirill Glebov - Senior Software Engineer">
+    <meta name="twitter:description" content="Expert in Golang, React, and Kubernetes. Full-stack developer building modern, scalable applications.">
+    <meta name="twitter:image" content="profile-image.jpg">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kirill Glebov",
+      "jobTitle": "Senior Software Engineer",
+      "url": "https://www.linkedin.com/in/kglebov",
+      "sameAs": [
+        "https://github.com/kirillglebov-outreach",
+        "https://github.com/sabbaka",
+        "mailto:kgliebov@gmail.com"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance, Outreach.io, Broadcom, Red Hat, Speedflow"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "National Aviation University"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0d0d2b;
+            color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header, section, footer {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            max-width: 1200px;
+            line-height: 1.8;
+        }
+        h1, h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #40c4ff;
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+        }
+        p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            color: #b3e5fc;
+        }
+        a {
+            color: #40c4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #80d8ff;
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px;
+            border: 2px solid #40c4ff;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            background-color: #16213e;
+            transition: transform 0.2s ease;
+        }
+        section:hover {
+            transform: translateY(-2px);
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #101629;
+            color: #40c4ff;
+            font-size: 0.95rem;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #e0f7fa;
+            color: #0d0d2b;
+        }
+        .dark-mode header, .dark-mode section, .dark-mode footer {
+            background-color: #e0f7fa;
+            color: #0d0d2b;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: #40c4ff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .timeline-item-content {
+            position: relative;
+            padding: 20px;
+            background-color: #16213e;
+            border: 1px solid #40c4ff;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #40c4ff;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item-content:hover {
+            background-color: #112240;
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+<body>
+
+<!-- Dark Mode Toggle Button -->
+<button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 20px; padding: 10px; background-color: #40c4ff; color: #0d0d2b; border: none; border-radius: 5px; cursor: pointer;">
+    Toggle Dark Mode
+</button>
+
+<header>
+    <h1>Kirill Glebov</h1>
+    <p>Senior Software Engineer | Full-stack Developer</p>
+</header>
+
+<section>
+    <h2>Professional Experience</h2>
+    <ul class="timeline">
+        <li class="timeline-item">
+            <div class="timeline-item-content">
+                <p>Freelance Developer | Building cloud-based solutions with TypeScript, Python, and Golang</p>
+            </div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-item-content">
+                <p>Outreach.io | Backend developer for high-scale applications using Node.js and Docker</p>
+            </div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-item-content">
+                <p>Red Hat | Leading full-stack development projects for enterprise solutions</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Skills & Projects</h2>
+    <p>🚀 Optimized microservices architecture | Developed full-stack applications for real-world businesses.</p>
+    <p>💻 Expert in front-end technologies like React & Angular, ensuring intuitive, responsive UI/UX.</p>
+    <p>🎮 Developed a World of Warcraft private server—leading both backend development and community management.</p>
+</section>
+
+<section>
+    <h2>Education & Certifications</h2>
+    <p>🎓 Bachelor of Information Technical Protection Systems</p>
+    <p>🏫 National Aviation University, Kyiv, Ukraine (2013)</p>
+    <p>📜 IELTS Certification, August 2018, Score: 8.0</p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:kgliebov@gmail.com">kgliebov@gmail.com</a></p>
+    <p>💻 GitHub (Work): <a href="https://github.com/kirillglebov-outreach">kirillglebov-outreach</a></p>
+    <p>💻 GitHub (Personal): <a href="https://github.com/sabbaka">sabbaka</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/kglebov">linkedin.com/in/kglebov</a></p>
+</section>
+
+<footer>
+    <p>🖥️ © 2024 Kirill Glebov | Building Tomorrow's Tech | </p
 </footer>
 
 </body>
